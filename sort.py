@@ -19,7 +19,7 @@ while not done:
 	c.printList()	
 	while not choiceDone:
 		print("Which sort method would you like to use?")
-		instring = input("(1)Bubble Sort (2)Insertion Sort (3)Quit\n> ")
+		instring = input("(1)Bubble Sort (2)Insertion Sort (3)Quick Sort (4)Quit\n> ")
 		if instring is "1":
 			print("You chose Bubble Sort")
 			c.bubbleSort(length)
@@ -33,6 +33,11 @@ while not done:
 			c.freq()
 			choiceDone = True
 		elif instring is "3":
+			c.quickSort()
+			c.printList()
+			c.freq()
+			choiceDone = True
+		elif instring is "4":
 			choiceDone = True
 			done = True
 		else: 

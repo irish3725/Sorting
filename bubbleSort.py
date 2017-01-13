@@ -49,6 +49,8 @@ class C:
 					fList.append(i)
 		myList = fList
 
+	def quickSort(self):
+
 	def freq(self):
 		count = 0
 		minval = 0
