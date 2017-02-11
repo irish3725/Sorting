@@ -5,18 +5,42 @@ from random import randint
 myList = []
 length = 0;
 
+""" 
+"   This class contains all of the sorting methods used by
+"   the main class in sorting. I could have put all of the 
+"   code into one file, but I wanted to learn how to call 
+"   methods from different files.
+"""
 class C:
+
+    """
+    "   generateList() generates a random list and prints it out.
+    "
+    "   parameter n is the maximum value that each value in the list can be.
+    "   parameter size is the number of values that will be in the list.
+    """
 	def generateList(self, n, size):
 		global myList
 		myList = []
 		length = n
 		for i in range(0, length):
 			myList.append(randint(0, size))
-	def printList(self):
+
+    """
+    "   printList() prints the list preceded and followed by a line to
+    "   make it more readable.
+    """
+    def printList(self):
 		print("--------------------------------------------------------------")
 		print(myList)
 		print("--------------------------------------------------------------")
 
+    """
+    "   bubbleSort() sorts the global list myList using the bubble 
+    "   sort algorithm
+    "
+    "   parameter n is the size of the list.
+    """
 	def bubbleSort(self, n):
 		for x in myList:
 			n = n - 1
@@ -30,6 +54,10 @@ class C:
 				i = i + 1
 		return myList
 
+    """
+    "   insertionSort() sorts the global list myList using the 
+    "   insertion sort algorithm
+    """
 	def insertionSort(self):
 		global myList
 		fList = []
@@ -49,6 +77,11 @@ class C:
 					fList.append(i)
 		myList = fList
 
+    """
+    "   freq() finds the value that shows up the most in the randomly
+    "   generated list and the value that shows up the least. It then
+    "   prints these values and tells you how often they showed up.
+    """
 	def freq(self):
 		count = 0
 		minval = 0
